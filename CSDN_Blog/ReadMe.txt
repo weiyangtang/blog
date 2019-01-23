@@ -1,0 +1,2 @@
+欢迎来到我的ftp服务器,我叫tangweiyang
+你也可以搭建你ftp服务器哦

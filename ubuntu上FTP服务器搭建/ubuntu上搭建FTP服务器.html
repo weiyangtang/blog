@@ -1,0 +1,1166 @@
+<html>
+                 <head>
+                   <meta charset="UTF-8">
+                   <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1">
+                   <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///C:/Users/tangweiyang/AppData/Local/boost/app-0.11.12/resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex {
+  font: 400 1.2em 'KaTeX_Main';
+  line-height: 1.2em;
+  white-space: initial;
+  text-indent: 0;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error .chart-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -1.8em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li.taskListItem {
+  list-style: none;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5rem !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre.CodeMirror {
+  height: initial;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre.mermaid svg {
+  max-width: 100% !important;
+}
+pre>span.filename {
+  margin: -0.5rem 100% 0.5rem -0.5rem;
+  padding: 0.125rem 0.375rem;
+  background-color: #777;
+  color: #fff;
+}
+pre>span.filename:empty {
+  display: none;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+.admonition.note,
+.admonition.hint,
+.admonition.danger,
+.admonition.caution,
+.admonition.error,
+.admonition.attention {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: 0.4rem solid #448aff;
+  border-radius: 0.2rem;
+  overflow: auto;
+}
+html .admonition>:last-child {
+  margin-bottom: 1.2rem;
+}
+.admonition .admonition {
+  margin: 1em 0;
+}
+.admonition p {
+  margin-top: 0.5em;
+}
+.admonition.note>.admonition-title:before,
+.admonition.hint>.admonition-title:before,
+.admonition.danger>.admonition-title:before,
+.admonition.caution>.admonition-title:before,
+.admonition.error>.admonition-title:before,
+.admonition.attention>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+/* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+/* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+/* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.admonition.note>.admonition-title,
+.admonition.hint>.admonition-title,
+.admonition.danger>.admonition-title,
+.admonition.caution>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.attention>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 4rem;
+  border-bottom: 0.1rem solid rgba(68,138,255,0.1);
+  background-color: rgba(68,138,255,0.1);
+  font-weight: 700;
+}
+.admonition>.admonition-title:last-child {
+  margin-bottom: 0;
+}
+.admonition.note {
+  border-left-color: #0288d1;
+}
+.admonition.note>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(2,136,209,0.2);
+  background-color: rgba(2,136,209,0.2);
+}
+.admonition.note>.admonition-title:before {
+  color: #0288d1;
+  content: "note";
+}
+.admonition.hint {
+  border-left-color: #009688;
+}
+.admonition.hint>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(0,150,136,0.2);
+  background-color: rgba(0,150,136,0.2);
+}
+.admonition.hint>.admonition-title:before {
+  color: #009688;
+  content: "info_outline";
+}
+.admonition.danger {
+  border-left-color: #c2185b;
+}
+.admonition.danger>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(194,24,91,0.2);
+  background-color: rgba(194,24,91,0.2);
+}
+.admonition.danger>.admonition-title:before {
+  color: #c2185b;
+  content: "block";
+}
+.admonition.caution {
+  border-left-color: #ffa726;
+}
+.admonition.caution>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(255,167,38,0.2);
+  background-color: rgba(255,167,38,0.2);
+}
+.admonition.caution>.admonition-title:before {
+  color: #ffa726;
+  content: "warning";
+}
+.admonition.error {
+  border-left-color: #d32f2f;
+}
+.admonition.error>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(211,47,47,0.2);
+  background-color: rgba(211,47,47,0.2);
+}
+.admonition.error>.admonition-title:before {
+  color: #d32f2f;
+  content: "error_outline";
+}
+.admonition.attention {
+  border-left-color: #455a64;
+}
+.admonition.attention>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(69,90,100,0.2);
+  background-color: rgba(69,90,100,0.2);
+}
+.admonition.attention>.admonition-title:before {
+  color: #455a64;
+  content: "priority_high";
+}
+dl {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+dt {
+  border-top: 1px solid #d0d0d0;
+  font-weight: bold;
+  text-align: right;
+  overflow: hidden;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  padding: 0.4rem 0.9rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd {
+  border-top: 1px solid #d0d0d0;
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  padding: 0.4rem 0.9rem;
+  min-height: 2.5rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd + dd {
+  margin-left: 20%;
+}
+pre.fence {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.fence .chart,
+pre.fence .flowchart,
+pre.fence .mermaid,
+pre.fence .sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+pre.fence .chart canvas,
+pre.fence .flowchart canvas,
+pre.fence .mermaid canvas,
+pre.fence .sequence canvas,
+pre.fence .chart svg,
+pre.fence .flowchart svg,
+pre.fence .mermaid svg,
+pre.fence .sequence svg {
+  max-width: 100% !important;
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="dark"] dl {
+  border-color: #444b59;
+  background-color: #282b2e;
+}
+body[data-theme="dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dark"] dd {
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] dl {
+  border-color: #444b59;
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] dd {
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="monokai"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] table thead tr {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n + 1) {
+  background-color: #272822;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n) {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="monokai"] dl {
+  border-color: #444b59;
+  background-color: #23241f;
+}
+body[data-theme="monokai"] dt {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] dd {
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="dracula"] dl {
+  border-color: #444b59;
+  background-color: #242631;
+}
+body[data-theme="dracula"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] dd {
+  border-color: #444b59;
+  background-color: #282a36;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+
+body {
+  font-family: '华文楷体','meiryo','Microsoft YaHei','helvetica','arial','sans-serif';
+  font-size: 16px;
+  false
+}
+@media print {
+  body {
+    padding-bottom: initial;
+  }
+}
+code {
+  font-family: '华文楷体','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: '华文楷体','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+
+@media print {
+  body[data-theme="white"] {
+    color: #000;
+    background-color: #fff;
+  }
+  .clipboardButton {
+    display: none
+  }
+}
+
+
+</style>
+                   <link rel="stylesheet" href="css/erlang-dark.css"><link rel="stylesheet" href="css/katex.min.css"><link rel="stylesheet" href="css/codemirror.css">
+                 </head>
+                 <body><h2 id="Ubuntu-1804%E4%B8%8A%E6%90%AD%E5%BB%BAFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BB%BA%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD%EF%BC%8C530-login-incorrect%EF%BC%8C550-Permission-denied%E8%84%B1%E5%9D%91" data-line="0">Ubuntu 18.04上搭建FTP服务器,建私人网盘,下载安装,文件上传下载，530 login incorrect，550 Permission denied.脱坑</h2>
+<h2 id="%E4%B8%80%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E3%80%81%E7%94%A8%E6%88%B7%E8%AE%BE%E7%BD%AE%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E3%80%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" data-line="1">一、FTP服务器的下载安装、用户设置、环境配置、使用说明</h2>
+<h3 id="1%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85ftp" data-line="2">1.下载安装ftp</h3>
+<pre class="code CodeMirror" data-line="3">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span></span>
+        <code class="shell">sudo apt-get update  #更新下载源
+sudo apt-get install vsftpd   #安装ftp
+</code>
+      </pre><h3 id="2%E8%AE%BE%E7%BD%AEftp%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%81%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E5%90%8D%E3%80%81%E5%AF%86%E7%A0%81" data-line="7">2.设置ftp文件夹、添加用户名、密码</h3>
+<pre class="code CodeMirror" data-line="8">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span></span>
+        <code class="shell">sudo useradd -d /home/ftp -M  userName  #用户名为userName,改成你的
+sudo passwd  userName  #用户名和你上面输入的一致,后面会有两次密码输入确认
+</code>
+      </pre><p data-line="12"><img src="attachments%5Cc9c175d1.png" alt="FTP服务器搭建_添加用户.png" /><br />
+<strong>小心坑</strong> /home/ftp 是该用户ftp服务器的路径,所以要创建该路径,开放该文件夹的权限</p>
+<pre class="code CodeMirror" data-line="14">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span></span>
+        <code class="shell">sudo mkdir /home/ftp #创建文件夹
+sudo chmod 777  /home/ftp #设置该文件夹权限为777,详细见下文
+</code>
+      </pre><p data-line="18"><img src="attachments%5Cd45a6582.png" alt="FTP服务器搭建_设置文件夹权限.png" /></p>
+<h3 id="3%E4%BF%AE%E6%94%B9vsftpdconf%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" data-line="19">3.修改vsftpd.conf配置文件</h3>
+<h4 id="31etcvsftpdvsftpdconf%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D" data-line="20">3.1<code>/etc/vsftpd/vsftpd.conf</code>的简单介绍</h4>
+<p data-line="21"><code>/etc/vsftpd/vsftpd.conf</code>是我们现在所用的vsftpd服务器的配置文件,这个非常重要,它可以决定是否允许匿名访问（默认是不允许匿名访问）、是否允许文件下载上传修改（默认是不允许上传文件和修改文件），是否允许本地登录（是指服务器本地登录）</p>
+<h4 id="32%E4%BF%AE%E6%94%B9etcvsftpdvsftpdconf%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" data-line="22">3.2修改/etc/vsftpd/vsftpd.conf配置文件</h4>
+<p data-line="23"><strong>打开vsftpd.conf 文件</strong></p>
+<pre class="code CodeMirror" data-line="24">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="shell">sudo vi /etc/vsftpd.conf 
+</code>
+      </pre><p data-line="27"><img src="attachments%5C97044ce1.png" alt="修改配置文件.png" /><br />
+<img src="attachments%5Ce49b5fb0.png" alt="修改配置文件2.png" /><br />
+<strong>/etc/vsftpd/vsftpd.conf配置文件的内容</strong></p>
+<pre class="code CodeMirror" data-line="30">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span><span class="CodeMirror-linenumber">26</span><span class="CodeMirror-linenumber">27</span><span class="CodeMirror-linenumber">28</span><span class="CodeMirror-linenumber">29</span></span>
+        <code class="C">listen=NO
+listen_ipv6=YES
+anonymous_enable=NO  #是否允许匿名访问
+local_enable=YES  #是否允许服务器本地登录
+# write_enable=YES   #是否允许对ftp文件上传和修改,默认是被注释掉,如果你需要用户上传文件,就将#去掉即可,见下文
+#local_umask=022
+#anon_upload_enable=YES   #是否允许匿名用户上传文件,创建文件夹,默认被注释掉
+#anon_mkdir_write_enable=YES  #是否允许匿名创建目录,默认是被注释掉
+dirmessage_enable=YES  #目录信息
+use_localtime=YES  #文件列表的上传时间
+xferlog_enable=YES  #上传下载的日志
+connect_from_port_20=YES  #ftp连接的端口,不要改
+#chown_uploads=YES  #切换文件上传的目录,小心,这个操作可以会被用户误操作,建议别改
+#chown_username=whoever
+#xferlog_file=/var/log/vsftpd.log  #默认的上传下载文件的日志存放路径,不用改,要查看日志见本文最后面
+#xferlog_std_format=YES #日志格式
+#idle_session_timeout=600 #会话的超时时间,默认10分钟
+#data_connection_timeout=120  #设定单次最大的连续传输时间，这里使用默认
+#nopriv_user=ftpsecure
+#设定支撑vsftpd 服务的宿主用户为手动建立的vsftpd用户。
+#async_abor_enable=YES 
+#设定支持异步传输功能
+
+#ascii_upload_enable=YES
+#ascii_download_enable=YES
+# 设置ACII码文件上下传输
+
+pam_service_name=ftp
+#重点:pam_service_name=ftp,否则可能会报530错误,登录失败
+</code>
+      </pre><p data-line="61"><strong>修改配置文件</strong><br />
+write_enable=YES  YES表示用户有权可以对ftp服务器进行文件上传和修改<br />
+将write_enable=YES前面的#删除掉<br />
+<img src="attachments%5Cd6159da1.png" alt="修改配置文件3.png" /></p>
+<h3 id="4%E7%99%BB%E5%BD%95%E6%B5%8B%E8%AF%95" data-line="66">4.登录测试</h3>
+<p data-line="67">window平台上:win+R,输入cmd,在dos窗口上输入</p>
+<pre class="code CodeMirror" data-line="68">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="shell">ftp : ip地址
+</code>
+      </pre><p data-line="71"><img src="attachments%5C5e029215.png" alt="windows命令行登录.png" /></p>
+<h3 id="5%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD" data-line="72">5.文件上传和下载</h3>
+<p data-line="73"><strong>温馨提示：如果在文件上传下载过程中遇到问题见下文：脱坑记</strong></p>
+<h4 id="51DOS%E5%91%BD%E4%BB%A4%E8%A1%8C" data-line="74">5.1DOS命令行</h4>
+<p data-line="75">常用的命令</p>
+<ol>
+<li data-line="76">open：与服务器相连接</li>
+<li data-line="77">send(put)：上传文件</li>
+<li data-line="78">get：下载文件</li>
+<li data-line="79">mget：下载多个文件</li>
+<li data-line="80">cd：切换目录</li>
+<li data-line="81">dir：查看当前目录下的文件</li>
+<li data-line="82">del：删除文件</li>
+<li data-line="83">bye：中断与服务器的连接<br />
+举个栗子</li>
+</ol>
+<pre class="code CodeMirror" data-line="85">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="shell">ftp :129.211.19.198 #登录
+dir   #查看文件列表
+cd  pic 
+mget  *.jpg  #下载pic文件下的所有.jp格式的图片
+</code>
+      </pre><p data-line="91">不太好用,特别是普通的用户,简直就是痛苦,用户体验感较差</p>
+<h4 id="52-window%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%BC%BA%E5%8A%9B%E6%8E%A8%E8%8D%90" data-line="92">5.2 window资源管理器下载上传文件(强力推荐)</h4>
+<p data-line="93"><img src="attachments%5C5c832b08.png" alt="window资源管理器两种方式.png" /></p>
+<blockquote data-line="94">
+<p data-line="94"><strong>下载</strong>:此文件夹下的文件复制粘贴到本地<br />
+<strong>上传</strong>:将本地的文件粘贴到此文件夹下<br />
+<strong>优点</strong>:用户体验感较好,可以直接下载文件夹,不用压缩文件,对比QQ传输文件,非常方便,不用安装任何插件<br />
+<strong>缺点</strong>:下载较大的文件时可能会有无响应,没有进度条,<br />
+<strong>适宜人群</strong>:这个FTP服务器比较适合当代大学生,偶尔要交个报告啊,平时要打印东西啊,不用带U盘,可以说是大学生的神器</p>
+</blockquote>
+<h4 id="53-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E8%BD%BD" data-line="99">5.3 浏览器下载</h4>
+<p data-line="100"><img src="attachments%5Cb4a12e26.png" alt="浏览器下载文件.png" /></p>
+<blockquote data-line="101">
+<p data-line="101"><strong>下载</strong>:右键另存为即可<br />
+<strong>上传</strong>:好像不可以<br />
+<strong>优点</strong>:可以看到进度条<br />
+<strong>缺点</strong>:无法下载文件夹,无法上传文件,操作稍微有些麻烦<br />
+<strong>适宜人群</strong>:whoerver</p>
+</blockquote>
+<h4 id="54-FTP%E4%B8%93%E7%94%A8%E5%B7%A5%E5%85%B7%E5%A6%82FileZilla%E5%8A%9F%E8%83%BD%E5%8D%81%E5%88%86%E5%BC%BA%E5%A4%A7" data-line="106">5.4 FTP专用工具:如FileZilla(功能十分强大)</h4>
+<p data-line="107"><img src="attachments%5C837a1885.png" alt="FileZilla使用介绍.png" /></p>
+<blockquote data-line="108">
+<p data-line="108"><strong>下载</strong>:右键有下载选择<br />
+<strong>上传</strong>:好像在本地文件右键选择上传<br />
+<strong>优点</strong>:功能十分强大,还可以直接传文件到云服务器,可视化好<br />
+<strong>缺点</strong>:要下载这个软件,还得花两三分钟习惯一下<br />
+<strong>适宜人群</strong>:开发人员、有一定电脑基础的人员</p>
+</blockquote>
+<h3 id="6%E6%9F%A5%E7%9C%8Bftp%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E4%B8%8B%E8%BD%BD%E3%80%81%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95" data-line="114">6.查看ftp日志(文件上传、下载、用户登录)</h3>
+<pre class="code CodeMirror" data-line="116">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="shell">cd /var/log  #ubuntu系统日志路径
+ls  #查看所有日志文件
+sudo vim /var/log/ vsftpd.log   
+#编辑查看vsftpd.log文件
+
+</code>
+      </pre><h2 id="%E4%BA%8C%E3%80%81530-Login-incorrect-Login-failed%E5%92%8C550-Permission-denied-%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" data-line="123">二、530 Login incorrect. Login failed和550 Permission denied 错误解决方案</h2>
+<h3 id="530-Login-incorrect-Login-failed" data-line="124">530 Login incorrect. Login failed</h3>
+<p data-line="125"><img src="attachments%5C70953ec9.png" alt="FTP服务器搭建_503错误.png" /><br />
+解决方案：<br />
+1.请务必检查你的ftp 地址、用户名、密码是否正确<br />
+极有可能是你密码设置没成功，或者是ip地址写错了,忘记密码可以重新设置<code>sudo passwd userName</code>,见上文<br />
+2.ubuntu专用的方法:重装vsftpd,然后重启ftp</p>
+<pre class="code CodeMirror" data-line="130">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="shell">sudo apt-get remove vsftpd
+sudo rm /etc/pam.d/vsftpd
+sudo apt-get install vsftpd 
+sudo service vsftpd restart  #重启ftp服务器测试
+</code>
+      </pre><p data-line="136">3.注释掉/etc/pam.d/vsftpd中一行</p>
+<pre class="code CodeMirror" data-line="137">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="shell"> sudo vim  /etc/pam.d/vsftpd # vim编辑vsftpd
+</code>
+      </pre><p data-line="140">将<code>auth required pam_shells.so</code>注释掉<br />
+<img src="attachments%5C0d7e2e3d.png" alt="修改vsftpd.png" /><br />
+还是要重启ftp</p>
+<pre class="code CodeMirror" data-line="143">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="shell">sudo service vsftpd restart  #重启ftp服务器测试
+</code>
+      </pre><p data-line="146">祝你早日脱坑,哈哈<br />
+<img src="attachments%5C702f989f.png" alt="ubuntu上登录ftp服务器.png" /><br />
+在ubuntu上登录ftp</p>
+<h2 id="3-%E7%99%BB%E5%BD%95%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD" data-line="149">3. 登录文件下载</h2>
+<h5 id="31%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%99%BB%E5%BD%95%E6%B5%8B%E8%AF%95" data-line="150">3.1命令行登录测试</h5>
+<pre class="code CodeMirror" data-line="151">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span></span>
+        <code class="shell">ftp 129.**.19.199/  
+#输入你ftp服务器的ip地址
+</code>
+      </pre><h3 id="550-%E9%94%99%E8%AF%AF-Permission-denied" data-line="156">550 错误 Permission denied</h3>
+<p data-line="157"><img src="attachments%5Cf83df93c.png" alt="资源管理器无法上传文件.png" /><br />
+文件上传无权限<br />
+响应:	550 Permission denied.<br />
+错误:	严重文件传输错误<br />
+修改文件权限参考文章:<br />
+<a href="https://blog.csdn.net/slwhy/article/details/78876237">Ubuntu修改文件权限 - slwhy的博客 - CSDN博客</a></p>
+<pre class="code CodeMirror" data-line="163">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="">https://blog.csdn.net/slwhy/article/details/78876237
+</code>
+      </pre><p data-line="166">设置文件权限777</p>
+<ul>
+<li data-line="167">
+<h4 id="%E7%94%A8FileZilla%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6550-Permission-denied%E6%B1%89%E5%AD%97%E4%B9%B1%E7%A0%81" data-line="167">用FileZilla客户端上传文件550 Permission denied,汉字乱码</h4>
+</li>
+</ul>
+<p data-line="168"><img src="attachments%5Ca7335727.png" alt="FTP文件上传550 Permission denied.png" /><br />
+<img src="attachments%5Cb9a30628.png" alt="FTP服务器搭建_505错误解决方案.png" /><br />
+解决方案<br />
+第一步: 设置ftp服务器的权限为777(每个用户都有权限读写修改)</p>
+<pre class="code CodeMirror" data-line="172">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span></span>
+        <code class="shell"> sudo chmod 777  /home/ftp  
+ # /home/ftp表示ftp服务器的文件存放路径
+</code>
+      </pre><p data-line="176"><img src="attachments%5C458ebc3f.png" alt="FTP服务器搭建_设置文件夹权限.png" /><br />
+第二步:将fileZilla的传输协议改成SFTP(Secure File Transfer Protocol)<br />
+<img src="attachments%5Ca81ffce1.png" alt="FTP服务器搭建_设置协议.png" /></p>
+</body>
+              </html>
